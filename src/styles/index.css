@@ -35,3 +35,7 @@ body {
 .list-notes::-webkit-scrollbar-thumb:hover {
   background: #4f5a38;
 }
+
+.error-text {
+  color: #b40e0e;
+}

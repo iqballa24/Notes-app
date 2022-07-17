@@ -1,6 +1,6 @@
 import React from "react";
 
-const index = ({ title, type, typeInput }) => {
+const index = ({ title, type, typeInput, value, onChangeHandler}) => {
   return (
     <div className="mt-5 space-y-3">
       <label className="font-light uppercase text-gray-500" htmlFor={title}>
@@ -12,6 +12,8 @@ const index = ({ title, type, typeInput }) => {
           type={type ? type : "input"}
           id={title}
           name={title}
+          value={value}
+          onChange={(e)=>onChangeHandler(e)}
           placeholder={`Fill ${title}`}
           required
         />
@@ -22,6 +24,8 @@ const index = ({ title, type, typeInput }) => {
           id={title}
           name={title}
           placeholder={`Fill ${title}`}
+          value={value}
+          onChange={onChangeHandler}
           rows="4"
           required
         />
